@@ -1,0 +1,15 @@
+# Final Submission Checklist
+- [ ] One GitHub repository
+- [ ] One Wokwi project link
+- [ ] PDF report
+- [ ] System architecture diagram
+- [ ] Workflow/block diagram
+- [ ] Live Blynk dashboard screenshots
+- [ ] Demo video
+- [ ] No `delay()` in source
+- [ ] Normal operation tested
+- [ ] Cell imbalance tested
+- [ ] Over-current/relay fault tested
+- [ ] Sensor anomaly tested
+- [ ] Wi-Fi outage/FIFO replay tested
+- [ ] Fault recovery tested

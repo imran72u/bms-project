@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Integrated BMS Safety System",
+  "editor": "wokwi",
+  "parts": [
+    {"type":"wokwi-esp32-devkit-v1","id":"esp","top":0,"left":0,"attrs":{}},
+    {"type":"wokwi-lcd2004","id":"lcd","top":-120,"left":360,"attrs":{"pins":"i2c"}},
+    {"type":"wokwi-potentiometer","id":"cell1","top":180,"left":300,"attrs":{}},
+    {"type":"wokwi-potentiometer","id":"cell2","top":180,"left":450,"attrs":{}},
+    {"type":"wokwi-potentiometer","id":"cell3","top":330,"left":300,"attrs":{}},
+    {"type":"wokwi-potentiometer","id":"cell4","top":330,"left":450,"attrs":{}},
+    {"type":"wokwi-potentiometer","id":"current","top":480,"left":300,"attrs":{}},
+    {"type":"wokwi-potentiometer","id":"temp","top":480,"left":450,"attrs":{}},
+    {"type":"wokwi-pushbutton","id":"fault","top":620,"left":300,"attrs":{"color":"red","label":"FAULT"}},
+    {"type":"wokwi-pushbutton","id":"recover","top":620,"left":450,"attrs":{"color":"green","label":"CLEAR"}},
+    {"type":"wokwi-relay-module","id":"relay","top":250,"left":650,"attrs":{}}
+  ],
+  "connections": [
+    ["esp:TX0","$serialMonitor:RX","",""],["esp:RX0","$serialMonitor:TX","",""],
+    ["esp:21","lcd:SDA","green",""],["esp:22","lcd:SCL","green",""],["lcd:VCC","esp:3V3","red",""],["lcd:GND","esp:GND.1","black",""],
+    ["cell1:SIG","esp:34","green",""],["cell2:SIG","esp:35","green",""],["cell3:SIG","esp:32","green",""],["cell4:SIG","esp:33","green",""],
+    ["current:SIG","esp:36","green",""],["temp:SIG","esp:39","green",""],
+    ["cell1:VCC","esp:3V3","red",""],["cell2:VCC","esp:3V3","red",""],["cell3:VCC","esp:3V3","red",""],["cell4:VCC","esp:3V3","red",""],["current:VCC","esp:3V3","red",""],["temp:VCC","esp:3V3","red",""],
+    ["cell1:GND","esp:GND.1","black",""],["cell2:GND","esp:GND.1","black",""],["cell3:GND","esp:GND.1","black",""],["cell4:GND","esp:GND.1","black",""],["current:GND","esp:GND.1","black",""],["temp:GND","esp:GND.1","black",""],
+    ["fault:1.l","esp:27","green",""],["fault:2.r","esp:GND.1","black",""],["recover:1.l","esp:26","green",""],["recover:2.r","esp:GND.1","black",""],
+    ["relay:IN","esp:25","green",""],["relay:VCC","esp:5V","red",""],["relay:GND","esp:GND.1","black",""]
+  ],
+  "dependencies": {}
+}
