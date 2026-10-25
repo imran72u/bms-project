@@ -2,6 +2,9 @@
 
 A single ESP32/Wokwi project integrating all six internship tasks into one production-oriented embedded system.
 
+## Live simulation
+Wokwi project: https://wokwi.com/projects/478855251308721153
+
 ## Integrated tasks
 1. Modular scalable BMS engine: weakest/strongest cells, imbalance, trend and adaptive threshold.
 2. Non-blocking protection relay: hysteresis, debounce, frozen/jump/range anomaly detection and lockout.

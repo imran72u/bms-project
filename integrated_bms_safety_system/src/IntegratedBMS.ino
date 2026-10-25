@@ -1,3 +1,6 @@
+#define BLYNK_TEMPLATE_ID "TMPL000000"
+#define BLYNK_TEMPLATE_NAME "BMS"
+
 /*
  * Integrated BMS Safety + IoT System
  * ----------------------------------
@@ -15,10 +18,12 @@
 #include <WiFi.h>
 #include <BlynkSimpleEsp32.h>
 #include <math.h>
+extern "C" {
 #include "bms_engine.h"
 #include "anomaly.h"
 #include "relay.h"
 #include "logger.h"
+}
 #include "FaultStateMachine.h"
 #include "WiFiReconnectSM.h"
 #include "TelemetryEngine.h"
